@@ -1,0 +1,268 @@
+[gd_scene load_steps=16 format=2]
+
+[ext_resource path="res://Sprites/metal-plate.png" type="Texture" id=1]
+[ext_resource path="res://Scripts/GridContainer.gd" type="Script" id=2]
+[ext_resource path="res://Scenes/invSlot.tscn" type="PackedScene" id=3]
+[ext_resource path="res://Scenes/hotbarSlot.tscn" type="PackedScene" id=4]
+[ext_resource path="res://Scripts/Node.gd" type="Script" id=5]
+[ext_resource path="res://Sprites/clearButton.png" type="Texture" id=6]
+[ext_resource path="res://Sprites/clearButtonPress.png" type="Texture" id=7]
+[ext_resource path="res://Scripts/clearAll.gd" type="Script" id=8]
+[ext_resource path="res://Player.tscn" type="PackedScene" id=9]
+[ext_resource path="res://parede.tscn" type="PackedScene" id=10]
+[ext_resource path="res://Sprites/tilemono.png" type="Texture" id=11]
+[ext_resource path="res://Scripts/shootButton.gd" type="Script" id=12]
+[ext_resource path="res://Sprites/goButtonPress.png" type="Texture" id=13]
+[ext_resource path="res://Sprites/goButton.png" type="Texture" id=14]
+[ext_resource path="res://Scenes/JanelinhaInfo.tscn" type="PackedScene" id=15]
+
+[node name="Mundo" type="Node2D"]
+
+[node name="Node2D" type="Node2D" parent="."]
+position = Vector2( 112, 0 )
+
+[node name="Sprite" type="Sprite" parent="Node2D"]
+scale = Vector2( 26, 22 )
+texture = ExtResource( 11 )
+centered = false
+hframes = 3
+
+[node name="Player" parent="Node2D" instance=ExtResource( 9 )]
+position = Vector2( 96, 80 )
+
+[node name="Parede" parent="Node2D" instance=ExtResource( 10 )]
+position = Vector2( 16, 16 )
+scale = Vector2( 11, 1 )
+
+[node name="Parede3" parent="Node2D" instance=ExtResource( 10 )]
+position = Vector2( 16, 144 )
+scale = Vector2( 11, 1 )
+
+[node name="Parede2" parent="Node2D" instance=ExtResource( 10 )]
+position = Vector2( 176, 32 )
+scale = Vector2( 1, 7 )
+
+[node name="Parede4" parent="Node2D" instance=ExtResource( 10 )]
+position = Vector2( 16, 32 )
+scale = Vector2( 1, 7 )
+
+[node name="TextureRect" type="TextureRect" parent="."]
+margin_top = 1.28976
+margin_right = 112.0
+margin_bottom = 177.29
+texture = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="TextureButton" parent="TextureRect" instance=ExtResource( 4 )]
+item = 1
+
+[node name="TextureButton2" parent="TextureRect" instance=ExtResource( 4 )]
+margin_left = 29.0
+margin_right = 45.0
+item = 2
+
+[node name="TextureButton3" parent="TextureRect" instance=ExtResource( 4 )]
+margin_left = 48.0
+margin_right = 64.0
+item = 3
+
+[node name="TextureButton4" parent="TextureRect" instance=ExtResource( 4 )]
+margin_left = 67.0
+margin_right = 83.0
+item = 5
+
+[node name="TextureButton5" parent="TextureRect" instance=ExtResource( 4 )]
+margin_left = 86.0
+margin_right = 102.0
+item = 4
+
+[node name="Inventory" type="GridContainer" parent="TextureRect"]
+margin_left = 10.0
+margin_top = 23.0
+margin_right = 102.0
+margin_bottom = 115.0
+grow_horizontal = 2
+grow_vertical = 2
+custom_constants/vseparation = 3
+custom_constants/hseparation = 3
+columns = 5
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_group_": true,
+"_edit_use_anchors_": false
+}
+
+[node name="TextureRect" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+
+[node name="TextureRect2" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 19.0
+margin_right = 35.0
+
+[node name="TextureRect3" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 38.0
+margin_right = 54.0
+
+[node name="TextureRect4" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 57.0
+margin_right = 73.0
+
+[node name="TextureRect5" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 76.0
+margin_right = 92.0
+
+[node name="TextureRect6" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_top = 19.0
+margin_bottom = 35.0
+
+[node name="TextureRect7" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 19.0
+margin_top = 19.0
+margin_right = 35.0
+margin_bottom = 35.0
+
+[node name="TextureRect8" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 38.0
+margin_top = 19.0
+margin_right = 54.0
+margin_bottom = 35.0
+
+[node name="TextureRect9" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 57.0
+margin_top = 19.0
+margin_right = 73.0
+margin_bottom = 35.0
+
+[node name="TextureRect10" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 76.0
+margin_top = 19.0
+margin_right = 92.0
+margin_bottom = 35.0
+
+[node name="TextureRect11" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_top = 38.0
+margin_bottom = 54.0
+
+[node name="TextureRect12" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 19.0
+margin_top = 38.0
+margin_right = 35.0
+margin_bottom = 54.0
+
+[node name="TextureRect13" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 38.0
+margin_top = 38.0
+margin_right = 54.0
+margin_bottom = 54.0
+
+[node name="TextureRect14" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 57.0
+margin_top = 38.0
+margin_right = 73.0
+margin_bottom = 54.0
+
+[node name="TextureRect15" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 76.0
+margin_top = 38.0
+margin_right = 92.0
+margin_bottom = 54.0
+
+[node name="TextureRect16" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_top = 57.0
+margin_bottom = 73.0
+
+[node name="TextureRect17" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 19.0
+margin_top = 57.0
+margin_right = 35.0
+margin_bottom = 73.0
+
+[node name="TextureRect18" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 38.0
+margin_top = 57.0
+margin_right = 54.0
+margin_bottom = 73.0
+
+[node name="TextureRect19" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 57.0
+margin_top = 57.0
+margin_right = 73.0
+margin_bottom = 73.0
+
+[node name="TextureRect20" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 76.0
+margin_top = 57.0
+margin_right = 92.0
+margin_bottom = 73.0
+
+[node name="TextureRect21" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_top = 76.0
+margin_bottom = 92.0
+
+[node name="TextureRect22" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 19.0
+margin_top = 76.0
+margin_right = 35.0
+margin_bottom = 92.0
+
+[node name="TextureRect23" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 38.0
+margin_top = 76.0
+margin_right = 54.0
+margin_bottom = 92.0
+
+[node name="TextureRect24" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 57.0
+margin_top = 76.0
+margin_right = 73.0
+margin_bottom = 92.0
+
+[node name="TextureRect25" parent="TextureRect/Inventory" instance=ExtResource( 3 )]
+margin_left = 76.0
+margin_top = 76.0
+margin_right = 92.0
+margin_bottom = 92.0
+
+[node name="Node" type="Control" parent="TextureRect"]
+script = ExtResource( 5 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="clearAll" type="TextureButton" parent="TextureRect"]
+anchor_left = 0.0267857
+anchor_top = 0.0397727
+anchor_right = 0.0267857
+anchor_bottom = 0.0397727
+margin_left = 10.4927
+margin_top = 2.12945
+margin_right = 33.4927
+margin_bottom = 11.1294
+texture_normal = ExtResource( 6 )
+texture_pressed = ExtResource( 7 )
+script = ExtResource( 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="shootButton" type="TextureButton" parent="TextureRect"]
+margin_left = 44.9348
+margin_top = 8.98747
+margin_right = 66.9348
+margin_bottom = 17.9875
+texture_normal = ExtResource( 14 )
+texture_pressed = ExtResource( 13 )
+script = ExtResource( 12 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Janelinha" parent="TextureRect" instance=ExtResource( 15 )]
+margin_left = -110.905
+margin_top = 5.66325
+margin_right = -30.9052
+margin_bottom = 69.6632
+
+[connection signal="button_up" from="TextureRect/clearAll" to="TextureRect/clearAll" method="_on_clearAll_button_up"]
+[connection signal="button_up" from="TextureRect/shootButton" to="TextureRect/shootButton" method="_on_shootButton_button_up"]

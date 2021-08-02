@@ -1,0 +1,51 @@
+[gd_scene load_steps=2 format=2]
+
+[ext_resource path="res://Scripts/JanelinhaInfo.gd" type="Script" id=1]
+
+[node name="Janelinha" type="Panel"]
+margin_right = 80.0
+margin_bottom = 80.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label" type="Label" parent="."]
+margin_left = 16.0
+margin_right = 64.0
+margin_bottom = 16.0
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label2" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 16.0
+margin_right = 64.0
+margin_bottom = 32.0
+
+[node name="Label3" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 32.0
+margin_right = 64.0
+margin_bottom = 48.0
+
+[node name="Label4" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 48.0
+margin_right = 64.0
+margin_bottom = 64.0
+rect_pivot_offset = Vector2( 16, 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Label5" type="Label" parent="."]
+margin_left = 16.0
+margin_top = 64.0
+margin_right = 64.0
+margin_bottom = 80.0
+rect_pivot_offset = Vector2( 16, 8 )
+__meta__ = {
+"_edit_use_anchors_": false
+}

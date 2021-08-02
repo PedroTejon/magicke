@@ -1,0 +1,20 @@
+[gd_scene load_steps=3 format=2]
+
+[ext_resource path="res://Scenes/teste.tscn" type="PackedScene" id=1]
+[ext_resource path="res://Scripts/MenuSelecao.gd" type="Script" id=2]
+
+[node name="Panel" type="Panel"]
+margin_right = 96.0
+margin_bottom = 64.0
+script = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ScrollContainer" parent="." instance=ExtResource( 1 )]
+margin_left = 8.59566
+margin_top = 7.23597
+margin_right = 88.5957
+margin_bottom = 57.236
+
+[editable path="ScrollContainer"]
